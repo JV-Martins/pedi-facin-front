@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.list{
+    width: 75%;
+    margin: 24px;
+}
+.content{
+    margin: 10px;
+}
+.pedido{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.button{
+    color: #008000;
+}
+

@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-accordion class="list">
+    <mat-expansion-panel  *ngFor="let pedido of dataSource; let i = index" class="content mat-elevation-z4" (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          MESA {{pedido.mesa}}
+        </mat-panel-title>
+        <mat-panel-description class="description">
+          <span>Status : {{pedido.status}}</span>
+        </mat-panel-description>
+        
+      </mat-expansion-panel-header>
+      <div >
+        <ul>
+          <li class="pedido"><p>{{pedido.lanche}}</p></li>
+          <dl><p> - {{pedido.obs}}</p></dl>
+          <li class="pedido"><p>{{pedido.acompanhamento}}</p></li>
+          <li class="pedido"><p>{{pedido.bebida}}</p></li>
+        </ul>
+      </div>
+      <mat-action-row>
+        <button mat-button color="primary">Editar</button>
+        <button class="button" (click)="finalizaPedido(pedido)" mat-button color="primary">Finalizar</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+     </mat-accordion>
+</div>

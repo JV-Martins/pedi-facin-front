@@ -1,0 +1,16 @@
+<mat-toolbar  class="header"color="primary">
+  <div class="content">
+  <mat-toolbar color="primary"class="row">
+    <mat-icon class="icon"> store</mat-icon>
+    <span>Pedi Fácin</span>
+    <span class="span"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button (click)="view()" mat-menu-item>Visualizar Pedidos</button>
+      <button (click)="create()" mat-menu-item>Novo Pedido</button>
+    </mat-menu>
+  </mat-toolbar>
+  </div>
+</mat-toolbar>
